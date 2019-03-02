@@ -204,7 +204,7 @@ class BalloonDataset(utils.Dataset):
                 
                 print(n,i)
                 
-            class_ids = [dpart.get(n['code']) for n in objects]
+            class_ids = [n['code'] for n in objects]
 
 
 
