@@ -204,7 +204,7 @@ class BalloonDataset(utils.Dataset):
                 
                 print(n,i)
                 
-            class_ids = [int(n['code']) for n in objects]
+            class_ids = [n['code'] for n in objects]
             print(class_ids)
 
 
@@ -213,6 +213,7 @@ class BalloonDataset(utils.Dataset):
             # Unfortunately, VIA doesn't include it in JSON, so we must read
             # the image. This is only managable since the dataset is tiny.
             image_path = os.path.join(dataset_dir, a['filename'])
+            print(a['filename'])
             image = skimage.io.imread(image_path)
             height, width = image.shape[:2]
 
