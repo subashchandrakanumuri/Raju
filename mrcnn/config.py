@@ -89,7 +89,7 @@ class Config(object):
     RPN_NMS_THRESHOLD = 1.0
 
     # How many anchors per image to use for RPN training
-    RPN_TRAIN_ANCHORS_PER_IMAGE = 320 
+    RPN_TRAIN_ANCHORS_PER_IMAGE = 400
     # ROIs kept after tf.nn.top_k and before non-maximum suppression
     PRE_NMS_LIMIT = 6000
 
@@ -100,7 +100,7 @@ class Config(object):
     # If enabled, resizes instance masks to a smaller size to reduce
     # memory load. Recommended when using high-resolution images.
     USE_MINI_MASK = True
-    MINI_MASK_SHAPE = (500,500)  # (height, width) of the mini-mask
+    MINI_MASK_SHAPE = (56,56)  # (height, width) of the mini-mask
 
     # Input image resizing
     # Generally, use the "square" resizing mode for training and predicting
