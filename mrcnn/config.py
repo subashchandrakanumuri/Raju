@@ -89,7 +89,7 @@ class Config(object):
     RPN_NMS_THRESHOLD = 1.0
 
     # How many anchors per image to use for RPN training
-    RPN_TRAIN_ANCHORS_PER_IMAGE = 448 
+    RPN_TRAIN_ANCHORS_PER_IMAGE = 336
     # ROIs kept after tf.nn.top_k and before non-maximum suppression
     PRE_NMS_LIMIT = 6000
 
@@ -173,7 +173,7 @@ class Config(object):
     # Non-maximum suppression threshold for detection
     DETECTION_NMS_THRESHOLD = 0.3
 
-    # Learning rate and momentum
+    #  rate and momentum
     # The Mask RCNN paper uses lr=0.02, but on TensorFlow it causes
     # weights to explode. Likely due to differences in optimizer
     # implementation.
